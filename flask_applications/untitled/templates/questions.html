@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<style type="text/css">
+			input{width: 100%}
+			input.radio{width: 10%}
+			input.submit{width: 20%}
+			select{width: 100%}
+			ul{list-style-type: none}
+		</style>
+	</head>
+	<body>
+		<h2>Очень важный опрос</h2>
+		<form class="container" action="/process">
+			<h4>Анкета информанта</h4>
+			<div class="row">
+				<div class="col-md-4">Возраст</div>
+				<div class="col-md-4"><input type="number" name="age"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">Гендер</div>
+				<select name="gender" class="col-md-4">
+					<option value="male">м</option>
+					<option value="female">ж</option>
+					<option value="other">другой</option>
+				</select>
+			</div>
+			<div class="row">
+				<div class="col-md-4">Уровень образования</div>
+				<select name="education" class="col-md-4">
+					<option value="kindergarten">детский сад</option>
+					<option value="school_9">9 классов школы</option>
+					<option value="school_11">11 классов школы</option>
+					<option value="college">среднее специальное</option>
+					<option value="student">неоконченное высшее</option>
+					<option value="bachelor">бакалавриат/специалитет</option>
+					<option value="master">магистратура</option>
+					<option value="phd">аспирантура</option>
+					<option value="candidate">кандидат наук</option>
+					<option value="doctor">доктор наук</option>
+				</select>
+			</div>
+			<h2>Вопросы</h2>
+            {% for question in questions %}
+			    <div class="row">
+				    <p class="col-md-6">{{question.text}}</p>
+					<table class="col-md-8">
+						<tr>
+							<td><input class="radio" type="radio" name="q{{ question.id }}" value=5></td>
+							<td><input class="radio" type="radio" name="q{{ question.id }}" value=4></td>
+							<td><input class="radio" type="radio" name="q{{ question.id }}" value=3></td>
+							<td><input class="radio" type="radio" name="q{{ question.id }}" value=2></td>
+							<td><input class="radio" type="radio" name="q{{ question.id }}" value=1></td>
+						</tr>
+						<tr>
+							<td>отлично</td>
+							<td>хорошо</td>
+							<td>норм</td>
+							<td>плохо</td>
+							<td>ужасно</td>
+						</tr>
+					</table>
+			    </div>
+            {% endfor %}
+			<div class="row">
+				<input class="submit" type="submit" name="submit" value="Отправить">
+			</div>
+		</form>
+	</body>
+</html>
