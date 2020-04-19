@@ -18,7 +18,7 @@ def send_welcome(message):
                      "Здравствуйте! Я умею отвечать пословицами и присылать фотки собак /dog")
 
 
-# этот обработчик присылают рандомные фотки собак
+# этот обработчик присылает рандомные фотки собак
 @bot.message_handler(commands=['dog'])
 def bop(message):
     contents = requests.get('https://random.dog/woof.json').json()
