@@ -25,4 +25,4 @@ def get_cat_image():
 
 def upload_image(upload, image):
     photo = upload.photo_messages(photos=image.raw)[0]
-    return 'photo{}_{}'.format(photo['owner_id'], photo['id'])
+    return f"photo{photo['owner_id']}_{photo['id']}"
