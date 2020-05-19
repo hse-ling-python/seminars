@@ -13,7 +13,7 @@ def generate_name():
 
 
 def generate_df():
-    K = 250
+    K = 2500
     df = pd.DataFrame({
         'name': [generate_name() for _ in range(K)],
         'test_0': [np.round(100 * i / K + np.random.randint(-5, 5)) for i in range(K)],
