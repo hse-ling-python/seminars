@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %} {{ film.title }} ({{ film.premiered }}-{% if film.ended %}{{ film.ended }}{% endif %}) {% endblock %}
+
+{% block content %}
+    <table class="table">
+        <tr>
+            <td>Название</td>
+            <td>{{ film.title }}</td>
+        </tr>
+        <tr>
+            <td>Год(ы)</td>
+            <td>{{ film.premiered }}-{% if film.ended %}{{ film.ended }}{% endif %}</td>
+        </tr>
+        <tr>
+            <td>Жанр</td>
+            <td>{{ film.film_type.name }}</td>
+        </tr>
+        <tr>
+            <td>Рейтинг</td>
+            <td>{{ film.rating.value }} ({{ film.rating.votes }})</td>
+        </tr>
+        <tr>
+            <td>Участники</td>
+            <td>
+                {% for person in film.crew[:30] %}
+                    <a href="/person/{{ person.person_id }}">{{ person.name }}</a>  <br>
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
+{% endblock %}

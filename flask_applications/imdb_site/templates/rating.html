@@ -1,7 +1,16 @@
 {% extends 'base.html' %}
 
-{% block title %} {{ film.title }} ({{ film.premiered }}-{% if film.ended %}{{ film.ended }}{% endif %}) {% endblock %}
+{% block title %} Рейтинг фильмов {% endblock %}
 
 {% block content %}
-    film.crew
+    <table class="table">
+        {% for i in range(0, rating|length) %}
+            <tr>
+                <td scope="row">{{ i + 1 }}</td>
+                <td>{{ rating[i].rating.value }}</td>
+                <td>{{ rating[i].premiered }}{% if rating[i].ended %}-{{ rating[i].ended }}{% endif %}</td>
+                <td><a href="/film/{{ rating[i].film_id }}" target="_blank">{{ rating[i].title }}</a></td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}
