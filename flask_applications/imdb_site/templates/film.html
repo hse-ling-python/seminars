@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %} {{ film.title }} ({{ film.premiered }}-{% if film.ended %}{{ film.ended }}{% endif %}) {% endblock %}
+{% block title %} {{ film.title }} ({{ film.premiered }}{% if film.ended %}-{{ film.ended }}{% endif %}) {% endblock %}
 
 {% block content %}
     <table class="table">

@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from models import Film, Person, Crew, db, Rating
+from models import Film, Person, db, Rating, Type
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///imdb_small_indexed.db'
@@ -9,8 +9,25 @@ db.init_app(app)
 
 
 @app.route('/')
-def hello_world():
-    return 'Hello World!'
+def index():
+    return render_template("index.html")
+
+
+@app.route('/search')
+def search():
+    film_types = Type.query.all()
+    print(film_types)
+
+    data = {
+        "film_types": film_types
+    }
+    return render_template("search.html", data=data)
+
+
+@app.route('/results')
+def results():
+    # result = Film.query.filter(Film.film_type_id=)
+    return render_template("results.html")
 
 
 @app.route("/film/<film_id>")
