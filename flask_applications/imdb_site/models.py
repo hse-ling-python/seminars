@@ -23,6 +23,7 @@ class Film(db.Model):
     runtime_min = db.Column('runtime_min', db.Integer)
 
     crew = db.relationship("Person", secondary='crew')
+    genres = db.relationship("Genre", secondary='film_genres', lazy='dynamic')
 
 
 class Type(db.Model):
@@ -31,6 +32,14 @@ class Type(db.Model):
 
     type_id = db.Column('id', db.Integer, primary_key=True)
     name = db.Column('film_type', db.Text)
+
+
+class Genre(db.Model):
+
+    __tablename__ = "genre_types"
+
+    genre_id = db.Column('id', db.Integer, primary_key=True)
+    name = db.Column('genre_name', db.Text)
 
 
 class Person(db.Model):
@@ -50,6 +59,14 @@ class Crew(db.Model):
 
     film_id = db.Column('title_id', db.Integer, ForeignKey('titles.title_id'))
     person_id = db.Column('person_id', db.Integer, ForeignKey('people.person_id'))
+
+
+class FilmGenres(db.Model):
+    __tablename__ = 'film_genres'
+    __table_args__ = (PrimaryKeyConstraint('title_id', 'genre_id'),)
+
+    film_id = db.Column('title_id', db.Integer, ForeignKey('titles.title_id'))
+    genre_id = db.Column('genre_id', db.Integer, ForeignKey('genre_types.id'))
 
 
 class Rating(db.Model):

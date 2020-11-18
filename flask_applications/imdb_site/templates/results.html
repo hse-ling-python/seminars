@@ -1,7 +1,17 @@
 {% extends 'base.html' %}
 
-{% block title %} Поиск по базе {% endblock %}
+{% block title %} Результаты поиска {% endblock %}
 
 {% block content %}
-
+    <table class="table">
+        {% for i in range(0, results|length) %}
+            <tr>
+                <td scope="row">{{ i + 1 }}</td>
+                <td>{{ results[i].rating.value }}</td>
+                <td>{{ results[i].premiered }}{% if results[i].ended %}-{{ results[i].ended }}{% endif %}</td>
+                <td><a href="/film/{{ results[i].film_id }}" target="_blank">{{ results[i].title }}</a></td>
+                <td>{% for genre in results[i].genres %} {{ genre.name }}; {% endfor %}</td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}

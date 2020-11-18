@@ -1,5 +1,5 @@
-from flask import Flask, render_template
-from models import Film, Person, db, Rating, Type
+from flask import Flask, render_template, request
+from models import Film, Person, db, Rating, Type, Genre, FilmGenres
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///imdb_small_indexed.db'
@@ -16,18 +16,38 @@ def index():
 @app.route('/search')
 def search():
     film_types = Type.query.all()
-    print(film_types)
+    genre_types = Genre.query.all()
 
     data = {
-        "film_types": film_types
+        "film_types": film_types,
+        "genre_types": genre_types
     }
     return render_template("search.html", data=data)
 
 
 @app.route('/results')
 def results():
-    # result = Film.query.filter(Film.film_type_id=)
-    return render_template("results.html")
+    if request.values:
+        search_result = db.session.query(Film)\
+            .join(Rating) \
+            .join(FilmGenres) \
+            .filter(
+                Film.film_type_id == request.values.get("film_type"),
+                Rating.votes > request.values.get("min_votes", int),
+                Rating.value > request.values.get("min_rating", float),
+                FilmGenres.genre_id == request.values.get("genre", int),
+            )
+        sorting = request.values.get("sort")
+        if sorting == "rating":
+            search_result = search_result.order_by(-Rating.value)
+        elif sorting == "year":
+            search_result = search_result.order_by(-Film.premiered)
+        else:
+            search_result = search_result.order_by(-Rating.votes)
+        search_result = search_result.limit(250).all()
+    else:
+        search_result = []
+    return render_template("results.html", results=search_result)
 
 
 @app.route("/film/<film_id>")
@@ -54,4 +74,4 @@ def rating():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
