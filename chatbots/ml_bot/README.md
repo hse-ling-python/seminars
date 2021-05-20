@@ -9,11 +9,15 @@ speech_recognition
 pydub
 ```
 
-Для pyttsx3
+Для pyttsx3 нужно установить espeak, если у вас Mac / Linux
 
-Linux (Mac тоже нужно espeak установить
+Linux
 ```
 sudo apt install espeak
+```
+MacOS 
+```
+brew install espeak
 ```
 
 Windows должен быть sapi5 по умолчанию
