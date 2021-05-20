@@ -5,7 +5,7 @@
 ```
 text2emotion
 pyttsx3
-speech_recognition
+SpeechRecognition
 pydub
 ```
 
