@@ -6,7 +6,7 @@ import create_markov_model
 import requests
 
 
-telebot.apihelper.proxy = conf.PROXY  # задаем прокси
+#telebot.apihelper.proxy = conf.PROXY  # задаем прокси
 bot = telebot.TeleBot(conf.TOKEN)  # создаем экземпляр бота
 
 
