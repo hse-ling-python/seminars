@@ -78,3 +78,30 @@ bot.send_message(message.chat.id, text)
 
 
 ### Генерация речи
+
+Генерация через библиотеку pyttsx3. Она использует дополнительные программы, поэтому нужно это проконтролировать. Здесь пример для Linux ("espeak").
+
+1. Выбираем случайную цитату
+2. Создаем имя для файла временного
+3. Запускаем pyttsx3
+4. Задаем настройку языка
+5. Сохраняем в файл
+6. Ждем обработку
+7. Отправляем текст пословицы, а затем войс с результатом озвучки
+8. Удаляем файл
+```
+text = random.choice(citations)
+filename = f"{uuid.uuid4().hex}.mp3"
+
+engine = pyttsx3.init(driverName="espeak")
+engine.setProperty('voice', 'en')
+engine.save_to_file(text, filename)
+engine.runAndWait()
+
+bot.send_message(message.chat.id, text)
+
+with open(filename, "rb") as audio:
+    bot.send_voice(message.chat.id, audio)
+
+os.remove(filename)
+```
