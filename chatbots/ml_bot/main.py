@@ -28,7 +28,12 @@ stickers = {
 @bot.message_handler(commands=['start', 'help'])
 def help(message):
     user = message.chat.id
-    bot.send_message(user, "Это бот попугай! Просто пришли что-нибудь, и я повторю.")
+    bot.send_message(user, """
+    Этот бот умеет делать 3 вещи:
+    - /sayit : выдает цитату на английском и ее озвучивает
+    - текст : на английском определяет эмоцию и отвечает стикером
+    - войс на русском : распознает текст
+    """)
 
 
 @bot.message_handler(content_types=['voice'])
