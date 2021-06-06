@@ -65,6 +65,7 @@ def say_it(message):
     engine = pyttsx3.init(driverName="espeak")  # sapi5 on Widows
     # Linux/Mac:  sudo apt install espeak
     engine.setProperty('voice', 'en')
+    engine.setProperty('rate', 145)
     engine.save_to_file(text, filename)
     engine.runAndWait()
     # time.sleep(1)
@@ -79,7 +80,10 @@ def echo(message):
     text = message.text
     emotions = te.get_emotion(text)
     emotion = max(emotions, key=emotions.get)
+    bot.send_message(message.chat.id, str(emotions))
     bot.send_sticker(message.chat.id, stickers.get(emotion))
+
+
 
 
 if __name__ == "__main__":
