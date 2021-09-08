@@ -283,10 +283,14 @@ Use green box only when necessary like to display links to related content.
 <div class="alert alert-block alert-danger">
 It is good to avoid red boxes but can be used to alert users to not delete some important part of code etc. 
 </div>
+```
 
 ## Система контроля версий
 
 Системы контроля версий позволяют отслеживать изменения в файлах, откатываться к рабочей версии и многое другое. Мы используем **git** и платформу **GitHub** для версионирования и хранения файлов курса.
+
+Визуализания проектов в git [тут](http://ghv.artzub.com/#user=deepmipt)
+Принцип ведения проектов в git в ![Git Flow](https://res.cloudinary.com/practicaldev/image/fetch/s--twX9zDLS--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3xwqxp14q6uvf17xrxuj.png)
 
 ### git
 
@@ -328,6 +332,26 @@ git commit -m "add new file"
 ```shell
 git push
 ```
+Список веток
+```shell
+git branch
+```
+Создать новую ветку
+```shell
+git checkout -b $BRANCH_NAME
+```
+Переключиться на ветку
+```shell
+git checkout $BRANCH_NAME
+```
+Удалить ветку
+```shell
+git branch -D $BRANCH_NAME
+```
+Смержить текущую ветку и выбранную
+```shell
+git merge $BRANCH_NAME
+```
 
 `.gitignore` - специальный файл, в котором описываются файлы, которые `git` не будет индексировать.
 
@@ -337,7 +361,7 @@ git push
 
 **Через VS Code**
 
-Слева, на панели **SOURCE CONYTROL**. Если написать сообение коммита и нажать галочку, тогда произойдет коммит. Pull **...->Pull**, push **...->Push**
+Слева, на панели **SOURCE CONYTROL**. Если написать сообение коммита и нажать галочку, тогда произойдет коммит. Pull **...->Pull**, push **...->Push**. Пример `git diff` https://herchel.com/static/gitdiff-840787c94fef37c9b5828b9440e15d02-42603.png
 
 ## virtualenv
 
