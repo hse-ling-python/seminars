@@ -290,6 +290,8 @@ It is good to avoid red boxes but can be used to alert users to not delete some 
 Системы контроля версий позволяют отслеживать изменения в файлах, откатываться к рабочей версии и многое другое. Мы используем **git** и платформу **GitHub** для версионирования и хранения файлов курса.
 
 Визуализания проектов в git [тут](http://ghv.artzub.com/#user=deepmipt)
+
+
 Принцип ведения проектов в git в ![Git Flow](https://res.cloudinary.com/practicaldev/image/fetch/s--twX9zDLS--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3xwqxp14q6uvf17xrxuj.png)
 
 ### git
