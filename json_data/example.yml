@@ -1,0 +1,11 @@
+just_key: value
+# комментарий
+list_of_values:
+  - 123
+  - asd
+  - etc
+list_of_dicts:
+ - key1: value1
+ - key2: value2
+ - key3: value4
+
