@@ -1,0 +1,21 @@
+version: 0.2
+
+env:
+  variables:
+    AWS_REGION: "ap-southeast-2"
+
+phases:
+  install:
+    runtime-versions:
+      docker: 19
+  pre_build:
+    commands:
+      - bash prebuild.sh
+  build:
+    commands:
+      - bash build.sh
+
+  post_build:
+    commands:
+      - echo pushing prod images to ecr...
+      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/docker-flask:$DOCKER_TAG
