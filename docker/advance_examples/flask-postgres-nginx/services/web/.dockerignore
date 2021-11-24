@@ -1,0 +1,4 @@
+# Prevent the following from being copied into the container
+.dockerignore
+Dockerfile 
+Dockerfile.prod

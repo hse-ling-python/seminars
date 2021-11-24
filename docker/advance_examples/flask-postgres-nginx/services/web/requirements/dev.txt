@@ -1,0 +1,14 @@
+# Specifies only dev-specific requirements
+# But imports the common ones too
+
+-r common.txt
+pre-commit==2.4.0 
+black==19.10b0
+flake8==3.8.2 
+pip-upgrader==1.4.15 
+pytest-cov==2.10.0 
+pytest-sugar==0.9.3 
+pytest==5.4.3 
+safety==1.9.0
+shellcheck-py==0.7.1.1
+isort==4.3.21

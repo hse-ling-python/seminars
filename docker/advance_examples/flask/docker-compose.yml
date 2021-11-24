@@ -1,0 +1,10 @@
+version: '3.5'
+
+services:
+  flask-app-service:
+    build: ./app
+    volumes:
+      - ./app:/usr/src/app
+      - .:/user/src
+    ports:
+      - 5555:9999
