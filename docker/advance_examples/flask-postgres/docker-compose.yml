@@ -10,6 +10,6 @@ services:
       - db
   db:
     image: postgres:10
-    env_file: .env
+    env_file: env_file
     expose:
       - 5432
