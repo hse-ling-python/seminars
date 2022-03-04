@@ -12,7 +12,7 @@ matplotlib==3.4.2
 networkx==2.5.1
 nltk==3.6.2
 numpy==1.20.3
-Pillow==8.2.0
+Pillow==9.0.0
 pydub==0.25.1
 pyparsing==2.4.7
 pyTelegramBotAPI==3.7.9
