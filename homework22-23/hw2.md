@@ -81,7 +81,7 @@
 
 **Ссылки на GiHub Classroom:**
 
-Группа 211
+[Группа 211](https://classroom.github.com/a/5Yl3VlcQ)
 
 Группа 212
 
