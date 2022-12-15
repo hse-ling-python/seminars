@@ -71,7 +71,7 @@
 
 **Ссылки на GiHub Classroom:**
 
-211
+[211](https://classroom.github.com/a/OafH8Fa6)
 
 212
 
