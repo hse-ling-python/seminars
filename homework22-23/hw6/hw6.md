@@ -10,11 +10,11 @@
 
 Данные - это перемешанный [публичный датасет](https://aclanthology.org/P11-1015/).
 
-```train.csv``` - тренировочные данные с ответами
+```train.csv``` - [тренировочные данные](https://github.com/hse-ling-python/seminars/blob/master/homework22-23/hw6/train.csv.zip) с ответами
 
-```test.csv``` - тестовые данные, ответы на которые вы должны предсказать и загрузить в репозиторий
+```test.csv``` - [тестовые данные](https://github.com/hse-ling-python/seminars/blob/master/homework22-23/hw6/test.csv.zip), ответы на которые вы должны предсказать и загрузить в репозиторий
 
-```sample_submission.csv``` - пример того, как должен выглядеть файл ответов, его можно получить так:
+```sample_submission.csv``` - [пример](https://github.com/hse-ling-python/seminars/blob/master/homework22-23/hw6/sample_submission.csv) того, как должен выглядеть файл ответов, его можно получить так:
 
 ```
 result = test[["id"]].copy()
@@ -74,6 +74,6 @@ Kaggle - это платформа для соревнований по анал
 Решение должно воспроизводиться, то есть если мы перезапустим самостоятельно вашу тетрадку, то качество должно быть похожим. Например, не должно быть так, что в вашем файле 100%, а после выполнения кода мы получаем 90%.
 
 
-## Ссылка:
+## Ссылка: 
 
-- [assignment6]()
+[assignment6](https://classroom.github.com/a/ijP4u3KA)
