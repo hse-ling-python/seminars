@@ -2,7 +2,7 @@
 
 **Тема: Морфология**
 
-**Дедлайн: 213: вторник 04.10.22 23:59; 212: суббота 08.10.22 23:59; 211: вторник 11.10.22 23:59**
+**Дедлайн: 221: вторник 10.10.23 23:59; 222: суббота 12.10.23 23:59; 223: вторник 13.10.23 23:59**
 
 **Важное: работы принимаются строго в ipynb (не скрипт, не скрипт в ячейке ipynb), после дедлайна работы не принимаются**
 
@@ -110,7 +110,7 @@ m = Mystem(mystem_bin="D:\\mystem.exe")
 **Ссылки на GiHub Classroom:**
 
 <table>
-    <tr><td>Группа 1</td><td><a href="https://classroom.github.com/a/OafH8Fa6">ссылка</a></td></tr>
-    <tr><td>Группа 2</td><td><a href="https://classroom.github.com/a/xxZXVFDA">ссылка</a></td></td></tr>
-    <tr><td>Группа 3</td><td><a href="https://classroom.github.com/a/djD-6581">ссылка</a></td></td></tr>       
+    <tr><td>Группа 1</td><td><a href="https://classroom.github.com/a/s7zU2i-9">ссылка</a></td></tr>
+    <tr><td>Группа 2</td><td><a href="">TBA/td></td></tr>
+    <tr><td>Группа 3</td><td><a href="">TBA</a></td></td></tr>       
 </table>
