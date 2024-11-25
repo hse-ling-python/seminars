@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Почтовые адреса</title>
+</head>
+<body>
+<h1>Адреса моих друзей</h1>
+<ul>
+    {% for name, email in emails.items() %}
+        <li>{{ name }} - {{ email }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>

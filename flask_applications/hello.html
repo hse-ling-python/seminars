@@ -1,0 +1,5 @@
+{% if username|length > 20 %}
+    <p>Слишком длинное имя!</p>
+{% else %}
+    <p>{{ username }}</p>
+{% endif %}
