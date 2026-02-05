@@ -4,6 +4,12 @@
 
 **Жёсткий дедлайн** 15 февраля 23:59. (половина оценки)
 
+HW6-241 https://classroom.github.com/a/bdFUPeor
+
+HW6-242 https://classroom.github.com/a/CMCRWIhC
+
+HW6-243 https://classroom.github.com/a/mdQGq_8i
+
 ## Задача
 
 Предсказать ожидаемую продолжительность жизни в стране по доступной для неё статистике болезней, смертности и пр. за 2014 год
