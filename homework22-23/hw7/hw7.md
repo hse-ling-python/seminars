@@ -2,8 +2,13 @@
 
 **Мягкий дедлайн** 24 февраля 23:59.
 **Жёсткий дедлайн** 1 марта 23:59.
-## Ссылка: 
-[TBU]()
+## Ссылки для сдачи:
+
+HW7-241 https://classroom.github.com/a/BAPY-Zh6
+
+HW7-242 https://classroom.github.com/a/luUSOv5p
+
+HW7-243 https://classroom.github.com/a/636cp-Yf
 
 ## Задача
 
