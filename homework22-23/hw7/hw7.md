@@ -20,9 +20,9 @@ HW7-243 https://classroom.github.com/a/636cp-Yf
 
 Данные - это перемешанный [публичный датасет](https://aclanthology.org/P11-1015/).
 
-```train.csv``` - [тренировочные данные](https://github.com/hse-ling-python/seminars/blob/master/homework22-23/hw7/train.csv.zip) с ответами
+```train.csv``` - [тренировочные данные](https://github.com/hse-ling-python/seminars/blob/master/homework22-23/hw7/train.zip) с ответами
 
-```test.csv``` - [тестовые данные](https://github.com/hse-ling-python/seminars/blob/master/homework22-23/hw7/test.csv.zip), ответы на которые вы должны предсказать и загрузить в репозиторий
+```test.csv``` - [тестовые данные](https://github.com/hse-ling-python/seminars/blob/master/homework22-23/hw7/test.zip), ответы на которые вы должны предсказать и загрузить в репозиторий
 
 ```sample_submission.csv``` - [пример](https://github.com/hse-ling-python/seminars/blob/master/homework22-23/hw7/sample_submission.csv) того, как должен выглядеть файл ответов, его можно получить так:
 
