@@ -1,5 +1,13 @@
 ## Инструкция по выполнению финального проекта
 
+### Ссылки для сдачи
+
+ + project-241 https://classroom.github.com/a/6cBKUBoS
+
+ + project-242 https://classroom.github.com/a/kB0rnwLW
+
+ + project-243 https://classroom.github.com/a/q7Fu3XR8
+
 ### Таймлайн
 - **до 15.02** Вы выбираете шаблон / тему и вписываете ее в [таблицу](https://docs.google.com/spreadsheets/d/1bUGooVM9cY-Vj7vzNUM_YbOosi1UtxDV1XVZrlhHmvM/edit?usp=sharing) (лист 2026);
 - **до 23.02** Мы прокомментируем ваш выбор (тему проекта можно поменять в любой момент до сдачи: одобрение преподавателя для этого не нужно, но проверяйте, что тема соотвествует общим требованиям и имеет достаточную сложность и оригинальность);
